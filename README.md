@@ -14,7 +14,7 @@ The application logic is slightly different since this is in Python instead of J
 2. Your MapR test node or local machine running these Python scripts must have **Python 3.6**
 3. Create and activate a Python **virtualenv** in either Mac OS X or Linux
     ```
-    $ python3.6 -m venv --system-site-packages ~/maprstreams
+    $ python3.11 -m venv --system-site-packages ~/maprstreams
     $ source ~/maprstreams/bin/activate
     ```
 4. Install the **mapr-client** package per [the instructions for your operating system](http://maprdocs.mapr.com/home/AdvancedInstallation/SettingUptheClient-install-mapr-client.html)
@@ -40,7 +40,7 @@ You will also need these Python modules which will be installed from the ```requ
 ```
 future==0.16.0
 hdrhistogram==0.5.2
-mapr-streams-python==0.9.2
+mapr-streams-python==2.6.0
 ```
 ## Step 1: Create the stream
 
