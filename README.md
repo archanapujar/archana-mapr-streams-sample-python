@@ -9,19 +9,19 @@ The application logic is slightly different since this is in Python instead of J
 
 
 ## Prerequisites
-1. To start, you need to get a **HPE Data Fabric 7.10 with EEP 9.4.0** running. You can install your [own cluster](ihttps://docs.ezmeral.hpe.com/datafabric-customer-managed/79/install.html) or [download a sandbox](https://docs.ezmeral.hpe.com/datafabric-customer-managed/79/MapRContainerDevelopers/RunMapRContainerDevelopers.html?hl=sandbox).
+1. To start, you need to get a **HPE Data Fabric 7.10 with EEP 9.4.0** running. You can install your [own cluster](https://docs.ezmeral.hpe.com/datafabric-customer-managed/home/install.html) or [download a sandbox](https://docs.ezmeral.hpe.com/datafabric-customer-managed/home/MapRContainerDevelopers/RunMapRContainerDevelopers.html?hl=sandbox).
     * **NOTE**: In this example, we used the HPE Data Fabric 7.10 with EEP 9.4.0 cluster.
-2. Your HPE Data Fabric test node or local machine running these Python scripts must have **Python 3.11**
+2. Your HPE Data Fabric test node or local machine running these Python scripts must have **Python 3.11**. The mapr-streams-python version 2.6.0 is qualified on python versions 3.7 to 3.12. We are using python version 3.11 as an example here.
 3. Create and activate a Python **virtualenv** in either Mac OS X or Linux
     ```
     $ python3.11 -m venv --system-site-packages ~/maprstreams
     $ source ~/maprstreams/bin/activate
     ```
-4. Install the **mapr-client** package per [the instructions for your operating system](http://maprdocs.mapr.com/home/AdvancedInstallation/SettingUptheClient-install-mapr-client.html)
-5. Install the **mapr-librdkafka** package per [the instructions for your operating system](http://maprdocs.mapr.com/home/AdvancedInstallation/InstallingStreamsCClient.html)
-    1. Ensure you set the **DYLD_LIBRARY_PATH** or **LD_LIBRARY_PATH** in the ```activate``` script of your virtualenv per the instructions for [Configuring the HPE Data Fabric Streams C Client](http://maprdocs.mapr.com/home/MapR_Streams/MapRStreamCAPISetup.html#task_qxg_h2m_3z)
+4. Install the **mapr-client** package per [the instructions for your operating system](https://docs.ezmeral.hpe.com/datafabric-customer-managed/home/AdvancedInstallation/SettingUptheClient-mapr-client.html ) 
+5. Install the **mapr-librdkafka** package per [the instructions for your operating system](https://docs.ezmeral.hpe.com/datafabric-customer-managed/home/AdvancedInstallation/InstallingStreamsCClient.html )
+    1. Ensure you set the **DYLD_LIBRARY_PATH** or **LD_LIBRARY_PATH** in the ```activate``` script of your virtualenv per the instructions for [Configuring the HPE Data Fabric Streams C Client](https://docs.ezmeral.hpe.com/datafabric-customer-managed/home/MapR_Streams/MapRStreamCAPISetup.html#task_qxg_h2m_3z)
     * **NOTE for OS X users only:** Setting this environment variable will only work in your virtualenv on Mac OS X; it will not be recognized from your .bash_profile due to OS X's security policy or from PyCharm.
-6. For Mac OS X or Linux users, install the [HPE Data Fabric Streams Python client](http://maprdocs.mapr.com/home/AdvancedInstallation/InstallingStreamsPYClient.html) per below:
+6. For Mac OS X or Linux users, install the [HPE Data Fabric Streams Python client](https://docs.ezmeral.hpe.com/datafabric-customer-managed/home/AdvancedInstallation/InstallingStreamsPYClient.html ) per below:
     ```
     $ source ~/maprstreams/bin/activate
     $ pip3 install mapr-streams-python --user
